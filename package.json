@@ -1,6 +1,8 @@
 {
-  "name": "hello-vue3",
+  "name": "{{name}}",
   "private": true,
+  "description": "{{description}}",
+  "auther": "{{author}}",
   "version": "0.0.0",
   "scripts": {
     "serve": "vite",
