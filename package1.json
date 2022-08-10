@@ -1,0 +1,28 @@
+{
+  "name": "{{name}}",
+  "private": true,
+  "description": "{{description}}",
+  "auther": "{{author}}",
+  "version": "0.0.0",
+  "scripts": {
+    "serve": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-legacy": "^1.8.2",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "axios": "^0.27.2",
+    "element-ui": "^2.15.9",
+    "sass": "^1.52.3",
+    "terser": "^5.14.1",
+    "vite": "^2.9.9",
+    "vue-router": "^4.0.16",
+    "vuex": "^4.0.2",
+    "socket.io-client": "^2.3.1",
+    "normalize.css": "7.0.0"
+  }
+}

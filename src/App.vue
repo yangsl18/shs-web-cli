@@ -1,21 +1,22 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import { storeToRefs } from 'pinia';
+import { useSysStore } from './store/sys';
+import zhCn from 'element-plus/es/locale/lang/zh-cn';
+import en from 'element-plus/es/locale/lang/en';
+import { computed } from '@vue/reactivity';
+
+const { locale } = storeToRefs(useSysStore());
+const elLocales = {
+  'zh-CN': zhCn,
+  'en-US': en
+};
+const elLocale = computed(() => elLocales[locale.value]);
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <el-config-provider :locale="elLocale">
+    <RouterView />
+  </el-config-provider>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style scoped></style>
