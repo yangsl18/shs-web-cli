@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from '@vue/reactivity';
 import { toRefs } from 'vue';
-
+import SvgIcon from '@/components/SvgIcon/index.vue';
 const props = defineProps({
   menu: {
     type: Object,
@@ -29,7 +29,13 @@ const fullPath = computed(() => {
 </script>
 <template>
   <el-sub-menu class="menu-item" v-if="childrenMenu.length > 1" :index="fullPath">
-    <template #title>{{ $t(title) }}</template>
+    <template #title>
+      <svg-icon
+        v-if="menu.meta && menu.meta.icon"
+        :icon-class="menu.meta.icon"
+      ></svg-icon>
+      <span class="ml5">{{ $t(title)}}</span>
+    </template>
     <MenuItem
       v-for="subMenu in childrenMenu"
       :key="subMenu.path"
@@ -44,7 +50,13 @@ const fullPath = computed(() => {
     :parentPath="fullPath"
   ></MenuItem>
   <el-menu-item v-else class="menu-item" :index="fullPath">
-    <template #title>{{ $t(title) }}</template>
+    <template #title>
+      <svg-icon
+        v-if="menu.meta && menu.meta.icon"
+        :icon-class="menu.meta.icon"
+      ></svg-icon>
+      <span class="ml5">{{ $t(title)}}</span>
+    </template>
   </el-menu-item>
 </template>
 <style scoped>

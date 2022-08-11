@@ -7,7 +7,12 @@ import { setupI18n } from '@/locales';
 import { ElMessageBox } from 'element-plus';
 import * as ElementPlusIconsVue from '@element-plus/icons-vue';
 
+// 引入svg注册脚本
+import 'virtual:svg-icons-register';
+
+
 const app = createApp(App);
+
 
 async function boot() {
   // 配置pinia

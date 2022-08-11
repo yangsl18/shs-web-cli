@@ -24,7 +24,9 @@ export const initRoutes = () => {
       component: Layout,
       redirect: '/level_1/level_1_content',
       meta: {
-        title: 'level-1'
+        title: 'level-1',
+        breadcrumb: false,
+        icon: 'homepage'
       },
       children: [
         {
@@ -33,7 +35,8 @@ export const initRoutes = () => {
           component: () => import('@/views/level-1/level-1.vue'),
           hideInMenu: true,
           meta: {
-            title: 'level-1'
+            title: 'level-1',
+            icon: 'homepage'
           },
         }
       ]
@@ -44,7 +47,8 @@ export const initRoutes = () => {
       component: Layout,
       redirect: '/level_2/level_2_1',
       meta: {
-        title: 'level-2'
+        title: 'level-2',
+        icon: 'homepage'
       },
       children: [
         {
@@ -52,7 +56,8 @@ export const initRoutes = () => {
           name: 'level_2_1',
           component: () => import('@/views/level-2/level-2-1/index.vue'),
           meta: {
-            title: 'level-2-1'
+            title: 'level-2-1',
+            icon: 'homepage'
           },
         },
         {
@@ -60,7 +65,8 @@ export const initRoutes = () => {
           name: 'level_2_2',
           component: () => import('@/views/level-2/level-2-2/index.vue'),
           meta: {
-            title: 'level-2-2'
+            title: 'level-2-2',
+            icon: 'homepage'
           },
         }
       ]

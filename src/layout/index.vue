@@ -19,7 +19,7 @@ import Breadcrumb from './components/breadcrumb.vue';
           <RouterView>
             <template #default="{ Component }">
               <Breadcrumb style="margin-bottom: 10px; font-size: 16px" />
-              <component :is="Component"></component>
+              <component :is="Component" class="layout-main-container"></component>
             </template>
           </RouterView>
         </el-scrollbar>
@@ -41,5 +41,7 @@ import Breadcrumb from './components/breadcrumb.vue';
 
 .layout-container {
   height: 100%;
+  background: #f5f7f9;
 }
+
 </style>

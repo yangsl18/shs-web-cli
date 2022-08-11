@@ -87,3 +87,24 @@
   outline: 2px solid var(--el-button-border-color);
   outline-offset: 1px
 }
+
+.el-scrollbar__view {
+  height: 100%;
+}
+.app-breadcrumb.el-breadcrumb {
+  line-height: 30px !important;
+  margin-bottom: 0 !important; 
+  // margin-left: 0 !important;
+  font-size: 14px !important;
+}
+
+.el-aside {
+  --el-aside-width: 160px !important;
+}
+.el-sub-menu .el-menu-item.is-active, .el-menu-item.is-active {
+  border-right: 4px solid #5e77ff;
+  background: #2e365a!important;
+  height: 50px;
+  min-width: 160px;
+}
+

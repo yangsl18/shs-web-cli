@@ -6,7 +6,7 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 const onLogin = (info) => {
-    router.push('index')
+    router.push('level_2')
     // loginApi(info)
     // .then(res => {
     //     console.log(res)

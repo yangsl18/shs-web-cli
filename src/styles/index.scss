@@ -24,6 +24,7 @@ label {
 html {
   height: 100%;
   box-sizing: border-box;
+  font-size: 12px;
 }
 
 #app {
@@ -76,4 +77,17 @@ div:focus {
   text-align: center;
   background: $systemThemeColor !important;
   border-color: $systemThemeColor !important;
+}
+
+.layout-main-container {
+  margin: 0;
+  background: #fff;
+  height: calc(100% - 30px);
+  box-sizing: border-box;
+  overflow-y: auto;
+  padding: 20px 15px;
+  box-sizing: border-box;
+}
+.ml5 {
+  margin-left: 5px;
 }

@@ -5,13 +5,14 @@ import { useUserStore } from '@/store/user';
 
 const { name: username } = storeToRefs(useUserStore());
 const logout = () => {
-};
+  location.href = '/login'
+};  
 </script>
 <template>
   <el-row :gutter="20" align="middle" style="margin: 18px 0">
     <el-col :span="12" style="display: flex; align-items: center">
       <el-image style="width: 40px; height: 24px; margin-right: 10px" :src="logo" fit="contain" />
-      <span>{{ $t('sys.name') }}</span>
+      <span style="font-size: 16px;">{{ $t('sys.name') }}</span>
     </el-col>
     <el-col :span="12">
       <span style="float: right">

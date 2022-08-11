@@ -31,9 +31,10 @@ export const sessionStorage = {
     window.sessionStorage.setItem(key, JSON.stringify(val));
   },
   // 获取临时缓存
-  get(key) {
+  get(key, defaultValue = '') {
     const json = window.sessionStorage.getItem(key);
-    return JSON.parse(json);
+    if(json) return JSON.parse(json);
+    return defaultValue;
   },
   // 移除临时缓存
   remove(key) {

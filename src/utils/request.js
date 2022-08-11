@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { ElMessage, ElMessageBox } from 'element-plus';
 import { localStorage } from '@/utils/storage';
-import useStore from '@/store';
 
 // 创建 axios 实例
 const service = axios.create({
@@ -18,10 +17,7 @@ service.interceptors.request.use(
         `Expected 'config' and 'config.headers' not to be undefined`
       );
     }
-    const { user } = useStore();
-    if (user.token) {
-      config.headers.Authorization = `${localStorage.get('token')}`;
-    }
+    config.headers.Authorization = `${localStorage.get('token')}`;
     return config;
   },
   error => {
